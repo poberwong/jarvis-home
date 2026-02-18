@@ -5,7 +5,7 @@ My personal AI assistant configuration, documentation, and experiments.
 ## Documentation
 
 *   [OpenClaw Guide (OpenClaw 指南)](./openclaw-guide.md) - Core capabilities, system configuration, and personalized setup.
-*   [OpenClaw Reminders PDF](./openclaw_reminders.pdf) - 主动提醒机制与当前任务列表（PDF）。
+*   [OpenClaw Reminders](./openclaw_reminders.md) - 主动提醒机制与当前任务列表（Markdown）。
 
 ## Projects
 
