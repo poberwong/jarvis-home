@@ -9,6 +9,7 @@ My personal AI assistant configuration, documentation, and experiments.
 *   [WordPocket PRD](./wordpocket_prd.md) - AI 驱动生词本项目需求文档（Draft）。
 *   [ClashX vs Clash Verge](./clashx_vs_clashverge.md) - 区别与规则配置说明。
 *   [MCP vs Skills](./mcp_vs_skills_notes.md) - 适用场景、区别与可迁移性。
+*   [Fund Analysis Plan](./fund_analysis_plan.md) - 基金持仓分析方案（尽量无后端）。
 
 ## Projects
 
