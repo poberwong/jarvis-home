@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.1",
+    "lastTouchedAt": "2026-03-03T23:38:27.494Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-01T16:41:35.316Z",
+    "lastRunVersion": "2026.2.26",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": true,
+    "defaultProfile": "openclaw",
+    "profiles": {
+      "openclaw": {
+        "cdpPort": 18800,
+        "color": "#FF4500"
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "google-antigravity:poberwong@gmail.com": {
+        "provider": "google-antigravity",
+        "mode": "oauth",
+        "email": "poberwong@gmail.com"
+      },
+      "google-antigravity:vpn.poberwong@gmail.com": {
+        "provider": "google-antigravity",
+        "mode": "oauth",
+        "email": "vpn.poberwong@gmail.com"
+      },
+      "google-gemini-cli:vpn.poberwong@gmail.com": {
+        "provider": "google-gemini-cli",
+        "mode": "oauth",
+        "email": "vpn.poberwong@gmail.com"
+      },
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.3-codex",
+        "fallbacks": [
+          "google-antigravity/claude-opus-4-5-thinking",
+          "google-antigravity/claude-opus-4-6-thinking",
+          "google-antigravity/gemini-3-flash",
+          "google-antigravity/gemini-3-pro-high",
+          "google-antigravity/claude-sonnet-4-5",
+          "google-gemini-cli/gemini-3-pro-preview",
+          "google-gemini-cli/gemini-2.5-pro",
+          "openrouter/openai/gpt-5-mini",
+          "openai-codex/gpt-5.3-codex",
+          "openai-codex/gpt-5.3-codex-spark",
+          "opencode/big-pickle",
+          "openai/gpt-5.3-codex-spark",
+          "openai/gpt-5.3-codex",
+          "openai/gpt-5.2-pro"
+        ]
+      },
+      "models": {
+        "google-antigravity/claude-opus-4-5-thinking": {},
+        "google-antigravity/claude-opus-4-6-thinking": {},
+        "google-antigravity/gemini-3-flash": {},
+        "google-antigravity/gemini-3-pro-high": {},
+        "google-antigravity/claude-sonnet-4-5": {},
+        "google-gemini-cli/gemini-3-pro-preview": {},
+        "google-gemini-cli/gemini-2.5-pro": {},
+        "openai-codex/gpt-5.2-codex": {},
+        "openrouter/openai/gpt-5-mini": {},
+        "openai-codex/gpt-5.3-codex": {},
+        "openai-codex/gpt-5.3-codex-spark": {},
+        "opencode/big-pickle": {},
+        "openai/gpt-5.3-codex-spark": {},
+        "openai/gpt-5.3-codex": {},
+        "openai/gpt-5.2-pro": {}
+      },
+      "workspace": "/Users/jarvis/.openclaw/workspace",
+      "userTimezone": "Asia/Shanghai",
+      "envelopeTimezone": "user",
+      "memorySearch": {
+        "provider": "gemini",
+        "remote": {
+          "apiKey": "***REDACTED***"
+        },
+        "model": "gemini-embedding-001"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "name": "Main",
+        "workspace": "/Users/jarvis/.openclaw/workspace",
+        "agentDir": "/Users/jarvis/.openclaw/agents/main/agent",
+        "subagents": {
+          "allowAgents": [
+            "main",
+            "moltbook",
+            "trader",
+            "xhs",
+            "macro",
+            "ops"
+          ]
+        }
+      },
+      {
+        "id": "moltbook",
+        "name": "Moltbook",
+        "workspace": "/Users/jarvis/.openclaw/workspace-moltbook",
+        "agentDir": "/Users/jarvis/.openclaw/agents/moltbook/agent"
+      },
+      {
+        "id": "trader",
+        "name": "Trader",
+        "workspace": "/Users/jarvis/.openclaw/workspace-trader",
+        "agentDir": "/Users/jarvis/.openclaw/agents/trader/agent"
+      },
+      {
+        "id": "xhs",
+        "name": "XHS",
+        "workspace": "/Users/jarvis/.openclaw/workspace-xhs",
+        "agentDir": "/Users/jarvis/.openclaw/agents/xhs/agent"
+      },
+      {
+        "id": "macro",
+        "name": "MacroNews",
+        "workspace": "/Users/jarvis/.openclaw/workspace-macro",
+        "agentDir": "/Users/jarvis/.openclaw/agents/macro/agent"
+      },
+      {
+        "id": "ops",
+        "name": "Ops",
+        "workspace": "/Users/jarvis/.openclaw/workspace-ops",
+        "agentDir": "/Users/jarvis/.openclaw/agents/ops/agent"
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave",
+        "apiKey": "***REDACTED***"
+      },
+      "fetch": {
+        "enabled": true
+      }
+    },
+    "sessions": {
+      "visibility": "all"
+    },
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "main",
+        "moltbook",
+        "trader",
+        "xhs",
+        "macro",
+        "ops"
+      ]
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "imessage"
+      }
+    },
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "webchat"
+      }
+    }
+  ],
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "main",
+    "mainKey": "main"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "web": {
+    "enabled": true
+  },
+  "channels": {
+    "imessage": {
+      "enabled": true,
+      "cliPath": "/opt/homebrew/bin/imsg",
+      "dbPath": "/Users/jarvis/Library/Messages/chat.db",
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist"
+    },
+    "feishu": {
+      "enabled": true,
+      "appId": "cli_a903da2baff81bdb",
+      "appSecret": "***REDACTED***"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "***REDACTED***"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "remote": {
+      "url": "ws://openclaw.local:18789",
+      "sshTarget": "jarvis@openclaw.local"
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    },
+    "entries": {
+      "apple-notes": {
+        "enabled": true
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "google-antigravity-auth": {
+        "enabled": true
+      },
+      "imessage": {
+        "enabled": true
+      },
+      "google-gemini-cli-auth": {
+        "enabled": true
+      },
+      "feishu": {
+        "enabled": true
+      }
+    }
+  }
+}
